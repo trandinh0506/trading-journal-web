@@ -1,0 +1,35 @@
+{
+  "dashboard": {
+    "title": "Dashboard"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "history": "Trade History",
+    "analytics": "Analytics",
+    "settings": "Settings"
+  },
+  "trade": {
+    "pair": "Trading Pair",
+    "pnl": "P&L",
+    "side_type": {
+      "long": "Long",
+      "short": "Short"
+    }
+  },
+  "auth": {
+    "login_title": "Login to System",
+    "signup_title": "Create New Account",
+    "email": "Email",
+    "full_name": "Full Name",
+    "password": "Password",
+    "login_btn": "Login",
+    "signup_btn": "Sign Up",
+    "signing_in": "Signing in...",
+    "creating_account": "Creating account...",
+    "error_default": "An error occurred. Please try again.",
+    "no_account": "Don't have an account?",
+    "have_account": "Already have an account?",
+    "create_now": "Create now",
+    "login_now": "Login now"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "dashboard": {
+    "title": "Tổng quan"
+  },
+  "sidebar": {
+    "dashboard": "Bảng điều khiển",
+    "history": "Lịch sử lệnh",
+    "analytics": "Phân tích thống kê",
+    "settings": "Cài đặt"
+  },
+  "trade": {
+    "pair": "Cặp tiền",
+    "pnl": "Lợi nhuận/Thua lỗ",
+    "side_type": {
+      "long": "Long",
+      "short": "Short"
+    }
+  },
+  "auth": {
+    "login_title": "Đăng nhập hệ thống",
+    "signup_title": "Tạo tài khoản mới",
+    "email": "Email",
+    "full_name": "Họ và tên",
+    "password": "Mật khẩu",
+    "login_btn": "Đăng nhập",
+    "signup_btn": "Đăng ký",
+    "signing_in": "Đang đăng nhập...",
+    "creating_account": "Đang tạo tài khoản...",
+    "error_default": "Có lỗi xảy ra. Vui lòng thử lại.",
+    "no_account": "Chưa có tài khoản?",
+    "have_account": "Đã có tài khoản?",
+    "create_now": "Tạo ngay",
+    "login_now": "Đăng nhập ngay"
+  }
+}

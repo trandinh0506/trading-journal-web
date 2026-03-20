@@ -1,0 +1,23 @@
+PROPRIETARY LICENSE
+-------------------
+Copyright (c) 2026 Junia Tran. All rights reserved.
+
+1. OWNERSHIP
+All intellectual property rights in this software, including but not limited 
+to source code, algorithms, and documentation, are the sole property of Junia Tran.
+
+2. RESTRICTIONS
+Unauthorized copying, modification, distribution, or resale of this software, 
+via any medium, is strictly prohibited. You may not use this source code to 
+create derivative works or competitive products without prior written 
+permission from the owner.
+
+3. THIRD-PARTY COMPONENTS
+This software incorporates components from a boilerplate authored by 
+João Paulo Moraes, originally licensed under the MIT License. 
+The original MIT terms apply solely to those specific components (see LICENSE.mit).
+
+4. DISCLAIMER OF WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR 
+ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE USE OF THE SOFTWARE.
