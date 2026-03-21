@@ -31,5 +31,14 @@
     "have_account": "Đã có tài khoản?",
     "create_now": "Tạo ngay",
     "login_now": "Đăng nhập ngay"
+  },
+  "controls": {
+    "exchange": "Sàn giao dịch",
+    "market_type": "Loại thị trường",
+    "symbol": "Cặp giao dịch",
+    "sync_btn": "Đồng bộ",
+    "syncing": "Đang đồng bộ...",
+    "select_placeholder": "Chọn...",
+    "subtitle": "Cập nhật hoạt động giao dịch mới nhất"
   }
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { AuthService } from '../../services/auth.service'
 import LanguageSwitcher from '../LanguageSwitcher'
@@ -9,6 +10,9 @@ const LoginPage: React.FC = () => {
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
+  const from = location.state?.from?.pathname || '/'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -17,9 +21,14 @@ const LoginPage: React.FC = () => {
 
     try {
       const response = await AuthService.login(email, password)
-      console.log('Login successful:', response.data)
-      localStorage.setItem('token', response.data.token)
-      //   window.location.href = '/dashboard'
+      if (response.status === 200 && response.data) {
+        console.log('Login message:', response.message)
+        console.log('login data:', response.data)
+        localStorage.setItem('token', response?.data?.token)
+        navigate(from, { replace: true })
+      } else {
+        console.log('Login failed:', response)
+      }
     } catch (err: unknown) {
       setError(
         (err as { response?: { data?: { message?: string } } }).response?.data

@@ -1,10 +1,10 @@
 export interface ApiResponse<T> {
-  data: T
+  data: T | null
   message: string
   status: number
 }
 
-export interface AuthResponse {
+export interface LoginResponse {
   token: string
   user: {
     id: string

@@ -31,5 +31,14 @@
     "have_account": "Already have an account?",
     "create_now": "Create now",
     "login_now": "Login now"
+  },
+  "controls": {
+    "exchange": "Exchange",
+    "market_type": "Market Type",
+    "symbol": "Symbol",
+    "sync_btn": "Sync",
+    "syncing": "Syncing...",
+    "select_placeholder": "Select...",
+    "subtitle": "Update your latest trading activity"
   }
 }
