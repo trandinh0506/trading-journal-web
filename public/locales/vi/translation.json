@@ -6,7 +6,8 @@
     "dashboard": "Bảng điều khiển",
     "history": "Lịch sử lệnh",
     "analytics": "Phân tích thống kê",
-    "settings": "Cài đặt"
+    "settings": "Cài đặt",
+    "api_keys": "API Keys"
   },
   "trade": {
     "pair": "Cặp tiền",
@@ -40,5 +41,19 @@
     "syncing": "Đang đồng bộ...",
     "select_placeholder": "Chọn...",
     "subtitle": "Cập nhật hoạt động giao dịch mới nhất"
+  },
+  "api_settings": {
+    "title": "Cấu hình API",
+    "subtitle": "Kết nối tài khoản sàn giao dịch của bạn để đồng bộ dữ liệu",
+    "api_key": "API Key",
+    "secret_key": "Secret Key",
+    "passphrase": "Passphrase (nếu có)",
+    "add_new": "Thêm kết nối mới",
+    "connected_exchanges": "Các sàn đã kết nối",
+    "status": "Trạng thái",
+    "active": "Đang hoạt động",
+    "save_btn": "Lưu cấu hình",
+    "api_key_placeholder": "Nhập API Key của bạn",
+    "secret_key_placeholder": "Nhập Secret Key của bạn"
   }
 }

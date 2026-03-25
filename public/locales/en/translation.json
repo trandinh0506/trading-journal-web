@@ -6,7 +6,8 @@
     "dashboard": "Dashboard",
     "history": "Trade History",
     "analytics": "Analytics",
-    "settings": "Settings"
+    "settings": "Settings",
+    "api_keys": "API Keys"
   },
   "trade": {
     "pair": "Trading Pair",
@@ -40,5 +41,19 @@
     "syncing": "Syncing...",
     "select_placeholder": "Select...",
     "subtitle": "Update your latest trading activity"
+  },
+  "api_settings": {
+    "title": "API Configuration",
+    "subtitle": "Connect your exchange account to sync data",
+    "api_key": "API Key",
+    "secret_key": "Secret Key",
+    "passphrase": "Passphrase (if applicable)",
+    "add_new": "Add New Connection",
+    "connected_exchanges": "Connected Exchanges",
+    "status": "Status",
+    "active": "Active",
+    "save_btn": "Save Configuration",
+    "api_key_placeholder": "Enter your API Key",
+    "secret_key_placeholder": "Enter your Secret Key"
   }
 }
