@@ -11,11 +11,23 @@
   },
   "trade": {
     "pair": "Cặp tiền",
-    "pnl": "Lợi nhuận/Thua lỗ",
     "side_type": {
       "long": "Long",
       "short": "Short"
-    }
+    },
+    "symbol": "Cặp giao dịch",
+    "side": "Vị thế",
+    "entry_price": "Giá vào",
+    "pnl": "Lợi nhuận (PnL)",
+    "status": "Trạng thái",
+    "time": "Thời gian",
+    "details": "Chi tiết lệnh",
+    "volume": "Khối lượng",
+    "fee": "Phí",
+    "open": "Đang mở",
+    "closed": "Đã đóng",
+    "buy": "MUA (LONG)",
+    "sell": "BÁN (SHORT)"
   },
   "auth": {
     "login_title": "Đăng nhập hệ thống",

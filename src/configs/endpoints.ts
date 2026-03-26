@@ -6,5 +6,8 @@ export const API_ENDPOINT = {
   EXCHANGE: {
     SUPPORTED: '/exchanges/supported',
     CONNECTION: '/connections'
+  },
+  TRADE: {
+    TRADES: '/trades'
   }
 }

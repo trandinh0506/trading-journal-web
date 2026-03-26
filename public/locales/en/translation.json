@@ -11,11 +11,23 @@
   },
   "trade": {
     "pair": "Trading Pair",
-    "pnl": "P&L",
+    "pnl": "PnL",
     "side_type": {
       "long": "Long",
       "short": "Short"
-    }
+    },
+    "symbol": "Symbol",
+    "side": "Side",
+    "entry_price": "Entry Price",
+    "status": "Status",
+    "time": "Time",
+    "details": "Trade Details",
+    "volume": "Volume",
+    "fee": "Fee",
+    "open": "Open",
+    "closed": "Closed",
+    "buy": "BUY (LONG)",
+    "sell": "SELL (SHORT)"
   },
   "auth": {
     "login_title": "Login to System",
