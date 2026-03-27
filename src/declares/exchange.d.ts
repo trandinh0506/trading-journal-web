@@ -13,3 +13,19 @@ export interface UserApiKey {
   is_active: boolean
   last_sync_at: string | null
 }
+
+export interface ConnectionMetadata {
+  platform: string
+  markets: {
+    connection_id: number
+    market_type: string
+  }[]
+}
+
+export interface SymbolInfo {
+  id: number
+  code: string
+  display_name: string
+  exchange: string
+  market_type: string
+}

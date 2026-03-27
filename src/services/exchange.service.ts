@@ -1,7 +1,12 @@
 import axiosInstance from '../utils/axiosInstance'
 import { API_ENDPOINT } from '../configs/endpoints'
 import { ApiResponse } from '../declares/api'
-import { SupportedExchange, UserApiKey } from '@/declares/exchange'
+import {
+  ConnectionMetadata,
+  SupportedExchange,
+  SymbolInfo,
+  UserApiKey
+} from '@/declares/exchange'
 
 export const ExchangeService = {
   getSupportedExchanges: async (): Promise<
@@ -108,6 +113,104 @@ export const ExchangeService = {
               response?: { data?: { message?: string }; status?: number }
             }
           ).response?.data?.message || 'Delete failed',
+        status:
+          (
+            error as {
+              response?: { data?: { message?: string }; status?: number }
+            }
+          ).response?.status || 500
+      }
+    }
+  },
+
+  getConnectionMetadata: async (): Promise<
+    ApiResponse<ConnectionMetadata[]>
+  > => {
+    try {
+      const response = await axiosInstance.get(API_ENDPOINT.EXCHANGE.METADATA)
+      return {
+        data: response.data,
+        message: 'Success',
+        status: 200
+      }
+    } catch (error: unknown) {
+      return {
+        data: [],
+        message:
+          (
+            error as {
+              response?: { data?: { message?: string }; status?: number }
+            }
+          ).response?.data?.message || 'Failed to fetch connection metadata',
+        status:
+          (
+            error as {
+              response?: { data?: { message?: string }; status?: number }
+            }
+          ).response?.status || 500
+      }
+    }
+  },
+
+  getSymbols: async (
+    exchange: string,
+    marketType: string
+  ): Promise<ApiResponse<SymbolInfo[]>> => {
+    try {
+      const response = await axiosInstance.get(
+        API_ENDPOINT.EXCHANGE.SYMBOLS(exchange, marketType)
+      )
+      return {
+        data: response.data,
+        message: 'Success',
+        status: 200
+      }
+    } catch (error: unknown) {
+      return {
+        data: [],
+        message:
+          (
+            error as {
+              response?: { data?: { message?: string }; status?: number }
+            }
+          ).response?.data?.message || 'Failed to fetch symbols',
+        status:
+          (
+            error as {
+              response?: { data?: { message?: string }; status?: number }
+            }
+          ).response?.status || 500
+      }
+    }
+  },
+
+  syncTrades: async (params: {
+    platform: string
+    market_type: string
+    symbol: string
+  }): Promise<ApiResponse<null>> => {
+    try {
+      const response = await axiosInstance.post(
+        API_ENDPOINT.TRADE.SYNC(
+          params.platform,
+          params.market_type,
+          params.symbol
+        )
+      )
+      return {
+        data: null,
+        message: 'Sync started successfully',
+        status: response.status
+      }
+    } catch (error: unknown) {
+      return {
+        data: null,
+        message:
+          (
+            error as {
+              response?: { data?: { message?: string }; status?: number }
+            }
+          ).response?.data?.message || 'Sync failed',
         status:
           (
             error as {

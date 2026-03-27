@@ -5,9 +5,14 @@ export const API_ENDPOINT = {
   },
   EXCHANGE: {
     SUPPORTED: '/exchanges/supported',
-    CONNECTION: '/connections'
+    CONNECTION: '/connections',
+    SYMBOLS: (exchange: string, marketType: string) =>
+      `/exchanges/${exchange}/markets/${marketType}/symbols`,
+    METADATA: '/connections/metadata'
   },
   TRADE: {
-    TRADES: '/trades'
+    TRADES: '/trades',
+    SYNC: (platform: string, marketType: string, symbol: string) =>
+      `/trades/sync/${platform}/${marketType}/${symbol}`
   }
 }
