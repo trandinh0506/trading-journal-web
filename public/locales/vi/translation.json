@@ -1,6 +1,19 @@
 {
   "dashboard": {
-    "title": "Tổng quan"
+    "title": "HIỆU SUẤT",
+    "subtitle": "Thống kê chi tiết hiệu suất thuật toán của bạn",
+    "equity_coming_soon": "Biểu đồ đường cong vốn (Equity Curve) sắp ra mắt...",
+    "stats": {
+      "total_trades": "Tổng số lệnh",
+      "total_trades_sub": "Lệnh đã thực hiện",
+      "win_rate": "Tỷ lệ thắng",
+      "net_pnl": "PnL Thực tế",
+      "gross_pnl": "Tổng PnL: {{value}}",
+      "total_fees": "Tổng phí",
+      "total_fees_sub": "Phí giao dịch sàn",
+      "avg_win": "Lợi nhuận TB",
+      "avg_loss": "Thua lỗ TB"
+    }
   },
   "sidebar": {
     "dashboard": "Bảng điều khiển",

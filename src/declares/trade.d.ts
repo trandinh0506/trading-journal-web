@@ -30,3 +30,13 @@ export interface Trade {
   images: TradeImage[] | null
   orders: TradeOrder[]
 }
+
+export interface TradeStats {
+  total_trades: number
+  win_rate: number
+  total_pnl: number
+  total_fee: number
+  net_pnl: number
+  avg_win: number
+  avg_loss: number
+}

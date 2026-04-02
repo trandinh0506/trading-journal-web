@@ -1,6 +1,6 @@
 import axiosInstance from '../utils/axiosInstance'
 import { ApiResponse } from '../declares/api'
-import { Trade } from '../declares/trade'
+import { Trade, TradeStats } from '../declares/trade'
 import { API_ENDPOINT } from '@/configs/endpoints'
 
 export const TradeService = {
@@ -21,6 +21,33 @@ export const TradeService = {
               response?: { data?: { message?: string }; status?: number }
             }
           ).response?.data?.message || 'Failed to fetch trades',
+        status:
+          (
+            error as {
+              response?: { data?: { message?: string }; status?: number }
+            }
+          ).response?.status || 500
+      }
+    }
+  },
+
+  getStats: async (): Promise<ApiResponse<TradeStats>> => {
+    try {
+      const response = await axiosInstance.get('/trades/stats')
+      return {
+        data: response.data,
+        message: 'Success',
+        status: 200
+      }
+    } catch (error: unknown) {
+      return {
+        data: {} as TradeStats,
+        message:
+          (
+            error as {
+              response?: { data?: { message?: string }; status?: number }
+            }
+          ).response?.data?.message || 'Failed to fetch stats',
         status:
           (
             error as {

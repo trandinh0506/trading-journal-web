@@ -1,6 +1,19 @@
 {
   "dashboard": {
-    "title": "Dashboard"
+    "title": "PERFORMANCE",
+    "subtitle": "Detailed analysis of your trading algorithm",
+    "equity_coming_soon": "Equity Curve Chart coming soon...",
+    "stats": {
+      "total_trades": "Total Trades",
+      "total_trades_sub": "Executed trades",
+      "win_rate": "Win Rate",
+      "net_pnl": "Net PnL",
+      "gross_pnl": "Gross: {{value}}",
+      "total_fees": "Total Fees",
+      "total_fees_sub": "Exchange commissions",
+      "avg_win": "Avg Win",
+      "avg_loss": "Avg Loss"
+    }
   },
   "sidebar": {
     "dashboard": "Dashboard",
