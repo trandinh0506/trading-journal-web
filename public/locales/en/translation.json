@@ -27,7 +27,8 @@
     "open": "Open",
     "closed": "Closed",
     "buy": "BUY (LONG)",
-    "sell": "SELL (SHORT)"
+    "sell": "SELL (SHORT)",
+    "timeline": "Open - Close Time"
   },
   "auth": {
     "login_title": "Login to System",

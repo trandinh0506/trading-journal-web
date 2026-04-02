@@ -27,7 +27,8 @@
     "open": "Đang mở",
     "closed": "Đã đóng",
     "buy": "MUA (LONG)",
-    "sell": "BÁN (SHORT)"
+    "sell": "BÁN (SHORT)",
+    "timeline": "Thời gian mở - đóng"
   },
   "auth": {
     "login_title": "Đăng nhập hệ thống",
