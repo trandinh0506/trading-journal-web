@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { TradeService } from '@/services/trade.service'
-import { TradeStats } from '@/declares/trade'
+import { TradeStats, EquityPoint } from '@/declares/trade'
 import {
   Loader2,
   TrendingUp,
@@ -9,21 +9,36 @@ import {
   Wallet,
   Receipt,
   Percent,
-  Target
+  Target,
+  Activity
 } from 'lucide-react'
+import EquityChart from '@/components/EquityChart'
 
 const DashboardPage: React.FC = () => {
   const { t } = useTranslation()
   const [stats, setStats] = useState<TradeStats | null>(null)
+  const [equityData, setEquityData] = useState<EquityPoint[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const fetchStats = async () => {
-      const res = await TradeService.getStats()
-      if (res.status === 200) setStats(res.data)
-      setLoading(false)
+    const fetchDashboardData = async () => {
+      try {
+        const [statsRes, equityRes] = await Promise.all([
+          TradeService.getStats(),
+          TradeService.getEquityPoints()
+        ])
+
+        if (statsRes.status === 200) setStats(statsRes.data)
+        if (equityRes.status === 200)
+          setEquityData(equityRes.data || ([] as EquityPoint[]))
+      } catch (error) {
+        console.error('Failed to fetch dashboard data:', error)
+      } finally {
+        setLoading(false)
+      }
     }
-    fetchStats()
+
+    fetchDashboardData()
   }, [])
 
   if (loading) {
@@ -87,6 +102,7 @@ const DashboardPage: React.FC = () => {
         </p>
       </header>
 
+      {/* Grid Stats */}
       <section className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {statCards.map((card, idx) => (
           <div
@@ -122,10 +138,32 @@ const DashboardPage: React.FC = () => {
         ))}
       </section>
 
-      <section className="mt-8 rounded-2xl border border-dashed border-slate-800 p-12 text-center">
-        <p className="text-sm italic text-slate-600">
-          {t('dashboard.equity_coming_soon')}
-        </p>
+      {/* Equity Curve Chart Section */}
+      <section className="mt-8 rounded-2xl border border-slate-800 bg-slate-900/30 p-6 shadow-2xl backdrop-blur-sm">
+        <div className="mb-2 flex items-center justify-between">
+          <div>
+            <h3 className="text-lg font-black uppercase italic tracking-tighter text-slate-200">
+              Equity <span className="text-blue-500">Curve</span>
+            </h3>
+            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+              {t('dashboard.stats.equity_curve_desc')}
+            </p>
+          </div>
+          <div className="flex items-center gap-2 rounded-full bg-slate-800/50 px-3 py-1">
+            <Activity size={12} className="animate-pulse text-blue-500" />
+            <span className="font-mono text-[9px] uppercase tracking-widest text-slate-400">
+              {t('dashboard.stats.status_live')}
+            </span>
+          </div>
+        </div>
+
+        {equityData.length > 0 ? (
+          <EquityChart data={equityData} />
+        ) : (
+          <div className="flex h-[350px] items-center justify-center italic text-slate-600">
+            {t('dashboard.stats.no_data_chart')}
+          </div>
+        )}
       </section>
     </main>
   )

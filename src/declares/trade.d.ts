@@ -40,3 +40,9 @@ export interface TradeStats {
   avg_win: number
   avg_loss: number
 }
+
+export interface EquityPoint {
+  timestamp: string
+  net_pnl: number
+  cumulative_pnl: number
+}

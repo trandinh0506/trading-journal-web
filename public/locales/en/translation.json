@@ -12,7 +12,11 @@
       "total_fees": "Total Fees",
       "total_fees_sub": "Exchange commissions",
       "avg_win": "Avg Win",
-      "avg_loss": "Avg Loss"
+      "avg_loss": "Avg Loss",
+      "total_equity": "Total Equity",
+      "equity_curve_desc": "Cumulative PnL fluctuations",
+      "status_live": "Live Sync",
+      "no_data_chart": "No data available for chart"
     }
   },
   "sidebar": {

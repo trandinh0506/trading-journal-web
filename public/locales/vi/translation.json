@@ -12,7 +12,11 @@
       "total_fees": "Tổng phí",
       "total_fees_sub": "Phí giao dịch sàn",
       "avg_win": "Lợi nhuận TB",
-      "avg_loss": "Thua lỗ TB"
+      "avg_loss": "Thua lỗ TB",
+      "total_equity": "Tổng vốn",
+      "equity_curve_desc": "Biến động PnL tích lũy",
+      "status_live": "Trực tuyến",
+      "no_data_chart": "Không có dữ liệu cho biểu đồ"
     }
   },
   "sidebar": {

@@ -13,6 +13,8 @@ export const API_ENDPOINT = {
   TRADE: {
     TRADES: '/trades',
     SYNC: (platform: string, marketType: string, symbol: string) =>
-      `/trades/sync/${platform}/${marketType}/${symbol}`
+      `/trades/sync/${platform}/${marketType}/${symbol}`,
+    STATS: '/trades/stats',
+    EQUITY: '/trades/equity-points'
   }
 }
