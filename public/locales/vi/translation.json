@@ -24,7 +24,8 @@
     "history": "Lịch sử lệnh",
     "analytics": "Phân tích thống kê",
     "settings": "Cài đặt",
-    "api_keys": "API Keys"
+    "api_keys": "API Keys",
+    "terminal": "Giao dịch"
   },
   "trade": {
     "pair": "Cặp tiền",

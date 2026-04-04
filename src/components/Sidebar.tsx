@@ -6,7 +6,8 @@ import {
   History,
   BarChart3,
   Key,
-  Settings
+  Settings,
+  LineChart
 } from 'lucide-react'
 import LanguageSwitcher from './LanguageSwitcher'
 
@@ -21,6 +22,11 @@ const Sidebar: React.FC = () => {
       path: '/',
       label: t('sidebar.dashboard'),
       icon: <LayoutDashboard size={20} />
+    },
+    {
+      path: '/terminal',
+      label: t('sidebar.terminal'),
+      icon: <LineChart size={20} className="text-blue-400" />
     },
     {
       path: '/history',

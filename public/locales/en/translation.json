@@ -24,7 +24,8 @@
     "history": "Trade History",
     "analytics": "Analytics",
     "settings": "Settings",
-    "api_keys": "API Keys"
+    "api_keys": "API Keys",
+    "terminal": "Terminal"
   },
   "trade": {
     "pair": "Trading Pair",
